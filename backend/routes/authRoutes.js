@@ -1,12 +1,9 @@
 import express from "express"
+import { SignUp } from "../controller/authController.js";
 
 const router = express.Router();
 
-router.post('/register', (req, res) => {
-    res.status(201).json({
-        message:"user registered successfully"
-    })
-})
+router.post('/register', SignUp)
 
 router.post('/login', (req, res) => {
     res.status(200).json({
